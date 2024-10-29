@@ -116,6 +116,7 @@ runs:
         if [[ ! -v CARGO_REGISTRIES_CRATES_IO_PROTOCOL ]]; then
           echo "CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse" >> $GITHUB_ENV
         fi
+        echo "RUSTUP_PERMIT_COPY_RENAME=1" >> $GITHUB_ENV
 
     - name: Install Rust Problem Matcher
       if: inputs.matcher == 'true'
